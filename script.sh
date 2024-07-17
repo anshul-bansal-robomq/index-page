@@ -6,7 +6,7 @@ read -p "enter second number " second
 let sum=first+second
 echo "$first+$second=$sum" >> calculation.txt
 
-FILE='/root/calculation.txt'
+FILE='./calculation.txt'
 for i in $(cat $FILE)
 do
         echo "$i"
