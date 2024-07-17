@@ -3,19 +3,15 @@ pipeline {
      stages {
          stage('build') {
              steps {
-                 echo "building the application"
+                  checkout scm
              }
          }
           stage('testing') {
              steps {
-                 echo "testing the application"
+                 sh './my_script.sh'
              }
          }
-           stage('deploy') {
-             steps {
-                 echo "deploy the application"
-             }
-         }
+          
      }
 }
 
