@@ -2,9 +2,20 @@ pipeline {
      agent any
      stages {
          stage('build') {
-             step {
-                 ehco "building the application"
+             steps {
+                 echo "building the application"
+             }
+         }
+          stage('testing') {
+             steps {
+                 echo "testing the application"
+             }
+         }
+           stage('deploy') {
+             steps {
+                 echo "deploy the application"
              }
          }
      }
 }
+
