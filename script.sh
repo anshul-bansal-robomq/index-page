@@ -1,10 +1,8 @@
 #!/bin/bash
 
-read -p "enter first number " first
-read -p "enter second number " second
 
-let sum=first+second
-echo "$first+$second=$sum" >> calculation.txt
+let sum=$1+$2
+echo "$1+$2=$sum" >> calculation.txt
 
 FILE='./calculation.txt'
 for i in $(cat $FILE)
